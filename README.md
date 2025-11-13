@@ -1,36 +1,138 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+# Lumina Atelier — Premium Wedding & Event Photography
 
-First, run the development server:
+Next.js • TypeScript • TailwindCSS • MongoDB • Cloudinary • Nodemailer • Framer Motion
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+</div>
+
+## ✨ Overview
+
+Lumina Atelier is a high-end photography experience designed for destination weddings and luxury events. The site showcases cinematic imagery, details signature services, and provides concierge booking via email/WhatsApp. An admin dashboard enables staff to manage enquiries and generate secure Cloudinary upload signatures.
+
+## 📁 Project Structure
+
+```
+src/
+  app/
+    (pages, API routes, admin dashboard)
+  components/
+    cards/, cta/, layout/, ui/
+  config/         // site copy, metadata, schema.org
+  data/           // mock data + Mongo fallbacks
+  lib/            // Cloudinary, email, validation, db helpers
+  models/         // Mongoose schemas
+  types/          // shared TypeScript interfaces
+tests/            // Vitest suites
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Install dependencies**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   ```bash
+   npm install
+   ```
 
-## Learn More
+2. **Configure environment variables**
 
-To learn more about Next.js, take a look at the following resources:
+   Copy `.env.example` → `.env.local` and supply real credentials for:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   - MongoDB Atlas (`MONGODB_URI`)
+   - Cloudinary (`NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, `CLOUDINARY_API_SECRET`)
+   - Gmail OAuth2 (`GMAIL_*` secrets)
+   - Admin secret token (`ADMIN_SECRET`)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Run the development server**
 
-## Deploy on Vercel
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   Open [http://localhost:3000](http://localhost:3000). Pages auto-refresh on save.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔑 Admin Dashboard
+
+- Navigate to `/admin`
+- Enter the shared `ADMIN_SECRET`
+- Features:
+  - View enquiries (Mongo with mock fallback)
+  - Update booking statuses
+  - Copy Cloudinary upload signatures for secure client-side uploads
+  - Quick links back to the marketing site
+
+**API headers:** requests must include `x-admin-secret: <token>` or `Authorization: Bearer <token>`.
+
+## 🧰 Available Scripts
+
+```bash
+npm run dev     # start development server
+npm run build   # build for production
+npm run start   # run production build
+npm run lint    # lint project
+npm run test    # run Vitest unit tests
+```
+
+### Vitest setup
+
+- Configured via `vitest.config.ts`
+- Tests reside in `tests/**/*.test.ts`
+- TypeScript picks up Vitest globals (see `tsconfig.json`)
+
+## 🧪 Tests
+
+Initial unit tests cover form validation logic:
+
+```bash
+npm test
+```
+
+> **Note:** Prior to running tests ensure `npm install` has been executed to install `vitest` and associated type definitions.
+
+## 🖼️ Assets & Performance
+
+- Hero/gallery imagery sourced from Cloudinary demo assets; replace with branded uploads.
+- Tailwind theme customized with Lumina palette, premium typography (Playfair Display + Inter), reusable spacing/typography utilities, and custom skeleton loaders.
+- Framer Motion animations add subtle polish on navigation and galleries.
+
+## 📬 Booking & Contact Flows
+
+- `/booking`: concierge-focused multi-step form with client-side validation (Zod) and server submission to `/api/bookings` (MongoDB + fallback mock + Gmail notification + WhatsApp link).
+- `/contact`: general enquiry form, reusing validation and email delivery.
+
+## 🗄️ Data Layer
+
+- MongoDB Atlas via Mongoose connection helper (`src/lib/mongodb.ts`).
+- Models: `Gallery`, `Booking`, `Settings`.
+- Mock data utilities provide graceful fallbacks while services are being configured locally.
+
+## ☁️ Cloudinary Integration
+
+- `src/lib/cloudinary.ts` handles optimized image URLs, upload signatures, and Next.js image loader.
+- Admin endpoint `/api/cloudinary-sign` generates signed upload payloads (admin secret required).
+
+## ✉️ Gmail Integration
+
+- `src/lib/email.ts` sends concierge notifications using Nodemailer + OAuth2.
+- Ensure Gmail app access (OAuth client & refresh token) or use a service account / SMTP alternative.
+
+## 🔐 Admin Secret
+
+- Store `ADMIN_SECRET` in environment variables.
+- Admin page persists secret in `sessionStorage` so refreshes retain access.
+
+## 📦 Deployment
+
+1. Provision environment variables via Vercel dashboard (or preferred hosting provider).
+2. Configure MongoDB Atlas IP allowlists & Cloudinary CORS settings for production domain.
+3. Deploy with `npm run build && npm run start` or push to Vercel for CI/CD.
+
+## ✅ Roadmap / Next Steps
+
+- Add end-to-end tests (Playwright/Cypress) for booking + contact flows.
+- Integrate real Cloudinary upload widget within admin dashboard.
+- Implement analytics & SEO enhancements (structured data already scaffolded).
+
+## 🤝 License
+
+Internal project — adapt licensing as required.
