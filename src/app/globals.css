@@ -2,7 +2,8 @@
 
 /* Base theme tokens */
 @layer base {
-  :root {
+  :root,
+  :host {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
@@ -23,6 +24,9 @@
     --input: 240 5.9% 90%;
     --ring: 33 35% 60%; /* gold-500 */
     --radius: 0.5rem;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
   }
 
   .dark {
@@ -45,6 +49,40 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 33 35% 60%; /* gold-500 */
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+}
+
+@layer base {
+  @supports ((-webkit-backdrop-filter: blur(0)) or (backdrop-filter: blur(0))) {
+    [data-nextjs-dialog-backdrop] {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+  }
+
+  @supports not ((-webkit-backdrop-filter: blur(0)) or (backdrop-filter: blur(0))) {
+    [data-nextjs-dialog-backdrop] {
+      background-color: rgba(15, 23, 36, 0.72);
+    }
+  }
+
+  @supports ((-webkit-mask-image: linear-gradient(black, black)) or (mask-image: linear-gradient(black, black))) {
+    [data-nextjs-container-errors-pseudo-html-collapse='true']
+      .nextjs__container_errors__component-stack
+      code {
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%);
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%);
+    }
+  }
+
+  .dev-tools-indicator-item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 }
 

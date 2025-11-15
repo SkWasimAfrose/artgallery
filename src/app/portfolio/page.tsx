@@ -13,17 +13,17 @@ export default async function PortfolioPage() {
   return (
     <div className="flex flex-col gap-24 pb-32">
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-charcoal via-charcoal-light to-charcoal" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(198,156,109,0.2),transparent_60%)]" />
-        <div className="absolute inset-0 opacity-[0.18]" aria-hidden>
-          <Image
-            src="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_1600/v1728900001/photography/noise-texture.png"
-            alt="Fine grain texture"
-            fill
-            sizes="100vw"
-            className="object-cover"
-            priority
-          />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#faf2e8] via-[#f3e1cb] to-[#fcf6ee]" />
+        <div
+          className="absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(210,160,110,0.26),transparent_55%),radial-gradient(circle_at_88%_6%,rgba(255,236,210,0.22),transparent_58%),linear-gradient(200deg,rgba(32,26,22,0.5),rgba(32,26,22,0.08) 60%,rgba(255,255,255,0))]"
+          aria-hidden
+        />
+        <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
+          <div className="absolute -left-20 top-20 h-60 w-60 rounded-full bg-gold/20 blur-3xl" />
+          <div className="absolute right-[18%] top-14 h-48 w-48 rounded-full border border-gold/25 opacity-65" />
+          <div className="absolute left-[30%] bottom-14 h-40 w-40 rounded-full border border-ivory/20 opacity-65" />
+          <div className="absolute -right-24 bottom-24 h-68 w-68 rounded-full bg-ivory/18 blur-3xl" />
+          <div className="absolute right-[32%] top-[46%] h-24 w-24 rounded-full border border-ivory/25 opacity-55" />
         </div>
 
         <div className="relative mx-auto flex max-w-7xl flex-col gap-14 px-4 pb-28 pt-24 sm:px-6 lg:flex-row lg:items-center lg:px-8 lg:py-32">

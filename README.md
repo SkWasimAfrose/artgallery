@@ -113,8 +113,8 @@ npm test
 
 ## ✉️ Gmail Integration
 
-- `src/lib/email.ts` sends concierge notifications using Nodemailer + OAuth2.
-- Ensure Gmail app access (OAuth client & refresh token) or use a service account / SMTP alternative.
+- `src/lib/email.ts` sends concierge notifications using Nodemailer + Gmail SMTP.
+- Generate a Gmail App Password and set `GMAIL_USER`, `GMAIL_APP_PASSWORD`, and optional `GMAIL_SMTP_HOST`/`GMAIL_SMTP_PORT` environment variables.
 
 ## 🔐 Admin Secret
 

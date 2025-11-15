@@ -7,7 +7,7 @@ export const mockGalleries: Gallery[] = [
     description: "A couture celebration across candlelit soirées and palace reveilles.",
     heroImage: {
       publicId: "photography/gallery_jaipur_hero",
-      url: "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_1600,c_fill,g_auto:subject/photography/gallery_jaipur.jpg",
+      url: "https://res.cloudinary.com/bae2g/image/upload/f_auto,q_auto,w_1600,c_fill,g_auto:subject/v1763239276/jaipur_yuuwwc.webp",
       width: 1600,
       height: 900,
       alt: "Royal Jaipur Palace wedding reception",
@@ -16,13 +16,13 @@ export const mockGalleries: Gallery[] = [
     images: [
       {
         publicId: "photography/gallery_jaipur_detail_1",
-        url: "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_1600/photography/gallery_jaipur_1.jpg",
+        url: "https://res.cloudinary.com/bae2g/image/upload/f_auto,q_auto,w_1600/v1763188284/IMG_20240126_154919_598_d9uvxc.jpg",
         width: 1600,
         height: 900,
       },
       {
         publicId: "photography/gallery_jaipur_detail_2",
-        url: "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_1600/photography/gallery_jaipur_2.jpg",
+        url: "https://res.cloudinary.com/bae2g/image/upload/f_auto,q_auto,w_1600/v1763188284/IMG_20240126_175137_171_pqtfhe.jpg",
         width: 1600,
         height: 900,
       },
@@ -38,7 +38,7 @@ export const mockGalleries: Gallery[] = [
     description: "An intimate beachfront elopement with sail-away brunch and champagne wishes.",
     heroImage: {
       publicId: "photography/gallery_maldives_hero",
-      url: "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_1600,c_fill,g_auto:subject/photography/gallery_maldives.jpg",
+      url: "https://res.cloudinary.com/bae2g/image/upload/f_auto,q_auto,w_1600,c_fill,g_auto:subject/v1763239354/Maldives_nwmsox.webp",
       width: 1600,
       height: 900,
       alt: "Couple kissing during Maldives sunrise vows",
@@ -71,8 +71,8 @@ export const mockSettings: Settings = {
     },
   ],
   socials: [
-    { label: "Instagram", href: "https://instagram.com/lumina.atelier" },
-    { label: "YouTube", href: "https://youtube.com/@luminaatelier" },
+    { label: "Instagram", href: "https://instagram.com/skwasimafrose" },
+    { label: "YouTube", href: "https://youtube.com/@skwasimafrose" },
   ],
 };
 

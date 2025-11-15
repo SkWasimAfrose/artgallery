@@ -23,13 +23,13 @@ export function ServiceCard({
   const card = (
     <article
       className={clsx(
-        "relative flex h-full flex-col gap-6 rounded-4xl border border-ivory/10 bg-charcoal-light/20 p-8 text-ivory shadow-[0_30px_70px_-60px_rgba(255,255,255,0.5)] transition hover:border-gold/40",
+        "relative flex h-full flex-col gap-6 rounded-4xl border border-ivory/10 bg-charcoal-light/20 px-8 pb-8 pt-12 text-ivory shadow-[0_30px_70px_-60px_rgba(255,255,255,0.5)] transition hover:border-gold/40",
         highlight && "border-gold/50 bg-charcoal/40",
         className,
       )}
     >
       {highlight && (
-        <span className="absolute right-8 top-8 rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-xs uppercase tracking-[0.3em] text-gold">
+        <span className="cursor-pointer absolute right-8 top-6 rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-xs uppercase tracking-[0.3em] text-gold">
           Signature
         </span>
       )}

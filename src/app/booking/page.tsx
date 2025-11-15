@@ -363,6 +363,7 @@ function FormField({
         onChange={onChange}
         placeholder={placeholder}
         autoComplete={autoComplete}
+        suppressHydrationWarning
         className="w-full rounded-3xl border border-ivory/15 bg-charcoal/50 px-4 py-3 text-sm text-ivory placeholder:text-ivory/40 focus:border-gold focus:outline-none"
         {...(multiline ? { rows } : { type, min })}
       />

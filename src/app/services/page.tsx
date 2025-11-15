@@ -115,7 +115,7 @@ export default function ServicesPage() {
           <div className="flex flex-1 justify-center lg:justify-end">
             <div className="relative h-[420px] w-[320px] overflow-hidden rounded-4xl border border-ivory/10 bg-charcoal/50 shadow-[0_50px_120px_-70px_rgba(198,156,109,0.6)]">
               <Image
-                src="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_640,h_960,c_fill,g_auto:subject/photography/services_hero.jpg"
+                src="https://res.cloudinary.com/bae2g/image/upload/f_auto,q_auto,w_640,h_960,c_fill,g_auto:subject/v1763187139/1003_wejnzh.jpg"
                 alt="Wedding couple photographed on a terrace"
                 fill
                 sizes="(min-width: 1024px) 320px, 60vw"

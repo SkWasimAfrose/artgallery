@@ -8,15 +8,15 @@ import { BookingCTA } from "@/components/cta/booking-cta";
 
 const heroImages = [
   {
-    src: "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_640,h_800,c_fill,g_auto:subject/photography/hero_portrait.jpg",
+    src: "https://res.cloudinary.com/bae2g/image/upload/f_auto,q_auto,w_640,h_800,c_fill,g_auto:subject/v1763238998/R_mokuo8.jpg",
     alt: "Bride and groom dancing under a canopy of lights",
   },
   {
-    src: "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_640,h_800,c_fill,g_auto:subject/photography/hero_couple.jpg",
+    src: "https://res.cloudinary.com/bae2g/image/upload/f_auto,q_auto,w_640,h_800,c_fill,g_auto:subject/v1763232902/a3e4fbea4e1dd46e2a19ad7111cc7de0_vccgr8.jpg",
     alt: "Editorial couple portrait posed in a regal hallway",
   },
   {
-    src: "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_640,h_800,c_fill,g_auto:subject/photography/hero_sangeet.jpg",
+    src: "https://res.cloudinary.com/bae2g/image/upload/f_auto,q_auto,w_640,h_800,c_fill,g_auto:subject/v1763239101/sangeet_ecxlya.jpg",
     alt: "Sangeet celebration captured with vibrant motion blur",
   },
 ];
@@ -41,7 +41,7 @@ const galleryHighlights = [
     title: "Royal Jaipur Palace",
     description: "A three-day celebration with couture fashion and candlelit soirées.",
     image:
-      "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_680,h_520,c_fill,g_auto:subject/photography/gallery_jaipur.jpg",
+      "https://res.cloudinary.com/bae2g/image/upload/f_auto,q_auto,w_680,h_520,c_fill,g_auto:subject/v1763239276/jaipur_yuuwwc.webp",
     href: "/portfolio/royal-jaipur-palace",
     badge: "Featured",
   },
@@ -49,14 +49,14 @@ const galleryHighlights = [
     title: "Maldives Sunrise Vows",
     description: "An intimate beachfront ceremony with champagne sail-away brunch.",
     image:
-      "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_680,h_520,c_fill,g_auto:subject/photography/gallery_maldives.jpg",
+      "https://res.cloudinary.com/bae2g/image/upload/f_auto,q_auto,w_680,h_520,c_fill,g_auto:subject/v1763239354/Maldives_nwmsox.webp",
     href: "/portfolio/maldives-sunrise-vows",
   },
   {
     title: "Lake Como Editorial",
     description: "A couture editorial framed by Italian villas and classic Riva boats.",
     image:
-      "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_680,h_520,c_fill,g_auto:subject/photography/gallery_como.jpg",
+      "https://res.cloudinary.com/bae2g/image/upload/f_auto,q_auto,w_680,h_520,c_fill,g_auto:subject/v1763239490/italians_x42ast.jpg",
     href: "/portfolio/lake-como-editorial",
   },
 ];
@@ -104,17 +104,17 @@ export default function Home() {
   return (
     <div className="flex flex-1 flex-col gap-28">
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-charcoal via-charcoal-light to-charcoal" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(198,156,109,0.22),transparent_55%)]" />
-        <div className="absolute inset-0 opacity-[0.18]" aria-hidden>
-          <Image
-            src="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_1600/v1728900001/photography/noise-texture.png"
-            alt="Fine grain texture"
-            fill
-            sizes="100vw"
-            className="object-cover"
-            priority
-          />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#f8efe4] via-[#f2dcc3] to-[#f9f3ea]" />
+        <div
+          className="absolute inset-0 bg-[radial-gradient(circle_at_18%_22%,rgba(210,160,110,0.28),transparent_55%),radial-gradient(circle_at_85%_5%,rgba(255,236,210,0.24),transparent_58%),linear-gradient(195deg,rgba(30,24,20,0.45),rgba(30,24,20,0.05) 55%,rgba(255,255,255,0))]"
+          aria-hidden
+        />
+        <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
+          <div className="absolute -left-24 top-16 h-64 w-64 rounded-full bg-gold/20 blur-3xl" />
+          <div className="absolute right-12 top-28 h-56 w-56 rounded-full bg-ivory/20 blur-3xl" />
+          <div className="absolute left-1/2 bottom-16 h-44 w-44 -translate-x-1/2 rounded-full border border-gold/25 opacity-70" />
+          <div className="absolute left-[18%] top-1/3 h-28 w-28 rounded-full border border-ivory/20 opacity-70" />
+          <div className="absolute right-[22%] bottom-28 h-20 w-20 rounded-full border border-ivory/25 opacity-60" />
         </div>
 
         <div className="relative mx-auto flex max-w-7xl flex-col gap-16 px-4 pb-24 pt-24 sm:px-6 lg:flex-row lg:items-center lg:px-8 lg:py-32">

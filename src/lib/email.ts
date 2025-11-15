@@ -1,15 +1,14 @@
 import nodemailer from "nodemailer";
 
-const {
-  GMAIL_USER,
-  GMAIL_CLIENT_ID,
-  GMAIL_CLIENT_SECRET,
-  GMAIL_REFRESH_TOKEN,
-} = process.env;
+const { GMAIL_USER, GMAIL_APP_PASSWORD, GMAIL_SMTP_HOST, GMAIL_SMTP_PORT } = process.env;
 
-if (!GMAIL_USER || !GMAIL_CLIENT_ID || !GMAIL_CLIENT_SECRET || !GMAIL_REFRESH_TOKEN) {
-  throw new Error("Missing Gmail OAuth2 environment variables for email sending.");
+if (!GMAIL_USER || !GMAIL_APP_PASSWORD) {
+  throw new Error("Missing Gmail SMTP credentials for email sending.");
 }
+
+const smtpHost = GMAIL_SMTP_HOST ?? "smtp.gmail.com";
+const smtpPort = Number(GMAIL_SMTP_PORT ?? "465");
+const useSecureConnection = smtpPort === 465;
 
 export type SendEmailOptions = {
   to: string | string[];
@@ -21,13 +20,12 @@ export type SendEmailOptions = {
 
 export async function sendEmail(options: SendEmailOptions) {
   const transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: smtpHost,
+    port: smtpPort,
+    secure: useSecureConnection,
     auth: {
-      type: "OAuth2",
       user: GMAIL_USER,
-      clientId: GMAIL_CLIENT_ID,
-      clientSecret: GMAIL_CLIENT_SECRET,
-      refreshToken: GMAIL_REFRESH_TOKEN,
+      pass: GMAIL_APP_PASSWORD,
     },
   });
 

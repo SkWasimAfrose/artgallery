@@ -15,15 +15,15 @@ export const siteConfig = {
     "Premium wedding and event photography with cinematic storytelling, luxe albums, and concierge-level service across India.",
   url: "https://lumina-atelier.example.com",
   ogImage:
-    "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,c_fill,w_1600/v1728900000/photography/hero_couple.jpg",
-  contactEmail: "hello@luminaatelier.com",
-  studioPhone: "+919876543210",
-  whatsappNumber: "+919876543210",
+    "https://res.cloudinary.com/bae2g/image/upload/f_auto,q_auto,c_fill,w_1600/v1763232902/a3e4fbea4e1dd46e2a19ad7111cc7de0_vccgr8.jpg",
+  contactEmail: "wasimafrose2020@gmail.com",
+  studioPhone: "+918101389536",
+  whatsappNumber: "+918101389536",
   address: {
     street: "17 Altamount Road",
-    city: "Mumbai",
-    region: "Maharashtra",
-    postalCode: "400026",
+    city: "Kolkata",
+    region: "West Bengal",
+    postalCode: "700001",
     country: "IN",
   },
   nav: [
@@ -34,9 +34,9 @@ export const siteConfig = {
     { label: "Contact", href: "/contact" },
   ] as NavItem[],
   social: [
-    { label: "Instagram", href: "https://instagram.com/lumina.atelier" },
-    { label: "YouTube", href: "https://youtube.com/@luminaatelier" },
-    { label: "Pinterest", href: "https://pinterest.com/luminaatelier" },
+    { label: "Instagram", href: "https://instagram.com/skwasimafrose" },
+    { label: "YouTube", href: "https://youtube.com/@skwasimafrose" },
+    { label: "Pinterest", href: "https://pinterest.com/skwasimafrose" },
   ] as SocialLink[],
   keywords: [
     "wedding photographer",
